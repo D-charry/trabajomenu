@@ -2,9 +2,7 @@ package menu;
 
 import javax.swing.JOptionPane;
 
-public class Menu {
-
-    
+public class Menu {    
     public static void main(String[] args) {
         int op1 = 0;
         int op2 = 0;
@@ -31,13 +29,20 @@ public class Menu {
                         
                             case 1:
                                 JOptionPane.showMessageDialog(null, "realizar suma ");
-                                JOptionPane.showInputDialog(null, "Ingrese el primer numero");
-                                numeroUno=op.nextInt();
-                                break;
-                                
+                                numeroUno=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el primer numero"));                                
+                                break;                                
                             case 2:
                                 JOptionPane.showMessageDialog(null, "realizar resta");
                                 break;
+                            case 3:
+                                JOptionPane.showMessageDialog(null, "realizar multiplicacion");
+                                break;
+                            case 4:
+                                JOptionPane.showMessageDialog(null, "realizar division");
+                                break;                            
+                            default:
+                                JOptionPane.showMessageDialog(null, "Ingresó una opción no valida");
+                                break;    
                             
                              
                         
@@ -67,4 +72,3 @@ public class Menu {
            }while(op1 != 4);
         }            
     } 
-}
